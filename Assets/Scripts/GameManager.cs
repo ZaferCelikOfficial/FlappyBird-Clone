@@ -99,7 +99,7 @@ public class GameManager : MonoBehaviour
         HighScoreText.text = HighScore.ToString();
         if (LastCounted > HighScore)
         {
-            HighScoreText.text = LastCounted.ToString();
+            PlayerPrefs.SetInt("HighScore", LastCounted);
         }
     }
 }
